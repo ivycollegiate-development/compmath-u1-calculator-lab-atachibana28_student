@@ -26,13 +26,14 @@ def get_number(prompt):
 
 
 def divide(a, b):
-    """Return a / b.
-
-    BUG: ZeroDivisionError if b == 0.
-    FIX ME: handle b == 0 safely — return None and let the caller
-    print a friendly message, or raise ValueError with a clear message.
-    """
+    if b == 0:
+        return None
     return a / b
+
+ 
+    
+
+    
 
 
 def main():
@@ -55,7 +56,7 @@ def main():
         if choice == "1":
             result = a + b
         elif choice == "2":
-            result = a - b
+            result = a - b 
         elif choice == "3":
             result = a * b
         elif choice == "4":
